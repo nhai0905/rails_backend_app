@@ -1,0 +1,23 @@
+octopus:
+  replicated: true
+  environments:
+    - development
+    - staging
+    - production
+  development:
+    shards: 
+      master_shard:
+        host: localhost
+        adapter: mysql2
+        encoding: utf8
+        database: backend_app_development
+        username: root
+        password: 
+      master_shard_1:
+        host: localhost
+        adapter: mysql2
+        encoding: utf8
+        database: hello_app_development
+        username: root
+        password:  
+    
