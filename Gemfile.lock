@@ -67,6 +67,7 @@ GEM
     ar-octopus (0.0.12)
       activerecord (>= 3.0.0beta)
     bcrypt (3.1.16)
+    bcrypt_pbkdf (1.1.0)
     bindex (0.8.1)
     bootsnap (1.7.3)
       msgpack (~> 1.0)
@@ -106,6 +107,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    ed25519 (1.2.4)
     erubi (1.10.0)
     ffi (1.15.0)
     globalid (0.4.2)
@@ -268,6 +270,7 @@ PLATFORMS
 
 DEPENDENCIES
   ar-octopus (= 0.0.12)
+  bcrypt_pbkdf (~> 1)
   bootsnap (>= 1.4.4)
   byebug
   capistrano
@@ -277,6 +280,7 @@ DEPENDENCIES
   capistrano3-puma
   capybara (>= 3.26)
   devise
+  ed25519 (~> 1.2)
   hiredis
   jbuilder (~> 2.7)
   listen (~> 3.3)
