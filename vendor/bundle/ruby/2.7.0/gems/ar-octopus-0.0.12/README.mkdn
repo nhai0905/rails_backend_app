@@ -1,0 +1,50 @@
+<h1> Octopus  - Easy Database Sharding for ActiveRecord</h1>
+
+<p> Octopus is a better way to do Database Sharding in ActiveRecord. Sharding allows multiple databases in the same rails application. While there are several projects that implement Sharding (e.g. DbCharmer, DataFabric), each project has its own limitations. The main goal of octopus project is to provide a nice and clean way of doing Database Sharding.</p>
+
+<h2>Feature list: </h2>
+<p> The design of the api is made to be simple as possible. Octopus is focusing in the end user, giving the power of multiple databases, but with reliable code and flexibility. Octopus is focused on Rails 3,  but will be soon compatible with Rails 2.x.</p>
+
+<p> Octopus supports: </p>
+
+- Sharding (with multiple shards, and grouped shards).
+- Replication (Master/slave support, with multiple slaves).
+- Moving data between shards with migrations.
+- Tools to manage database configurations. (soon)
+
+<p> To see the complete list of features and syntax, please check out our <a href="http://wiki.github.com/tchandy/octopus/"> Wiki</a></p>
+<p>Wanna see sample rails applications using octopus features? please check it out: <a href="http://github.com/tchandy/octopus_sharding_example">Sharding Example</a> and <a href="http://github.com/tchandy/octopus_replication_example">Replication Example</a> </p> 
+  
+<h2>Thanks</h2>
+
+This project is sponsored by the <a href="http://www.rubysoc.org">Ruby Summer of Code</a>,
+and my mentors <a href="http://github.com/mperham">Mike Perham</a> and <a href="http://github.com/amitagarwal">Amit Agarwal</a>.
+
+
+<h3>If you are writing code that smells using octopus, the EVIL Octopus is going behind you, be careful.</h3>
+<pre>
+                                _________________
+                      ___       | I'm so EVIL!  |
+                   .-'   `'.    |______________ |
+                  /         \   /
+                  |         ;  /
+                  |         | /         ___.--,
+         _.._     |0) ~ (0) |    _.---'`__.-( (_.
+  __.--'`_.. '.__.\    '--. \_.-' ,.--'`     `""`
+ ( ,.--'`   ',__ /./;   ;, '.__.'`    __
+ _`) )  .---.__.' / |   |\   \__..--""  """--.,_
+`---' .'.''-._.-'`_./  /\ '.  \ _.-~~~````~~~-._`-.__.'
+      | |  .' _.-' |  |  \  \  '.               `~---`
+       \ \/ .'     \  \   '. '-._)
+        \/ /        \  \    `=.__`~-.
+        / /\         `) )    / / `"".`\
+  , _.-'.'\ \        / /    ( (     / /
+   `--~`   ) )    .-'.'      '.'.  | (
+          (/`    ( (`          ) )  '-;
+           `      '-;         (-'
+</pre>
+
+
+<h2>Copyright</h2>
+
+Copyright (c) 2010 Thiago Pradi, released under the MIT license.

@@ -1,0 +1,100 @@
+production:
+  shards:
+    alone_shard:
+      adapter: mysql
+      host: localhost
+      database: octopus_shard5
+    
+    postgresql_shard:
+      adapter: postgresql
+      username: postgres
+      password:
+      database: octopus_shard1
+      encoding: unicode
+    
+    history_shards:
+      aug2009:
+        adapter: mysql
+        host: localhost
+        database: octopus_shard2
+      aug2010:
+        adapter: mysql
+        host: localhost
+        database: octopus_shard3
+      aug2011:
+        adapter: mysql
+        host: localhost
+        database: octopus_shard4
+    
+    country_shards:
+      canada:
+        adapter: mysql
+        host: localhost
+        database: octopus_shard2
+      brazil:
+        adapter: mysql
+        host: localhost
+        database: octopus_shard3
+      russia:
+        adapter: mysql
+        host: localhost
+        database: octopus_shard4
+        
+        
+production_raise_error:
+  shards:
+    history_shards:
+      duplicated_shard_name:
+        adapter: mysql
+        host: localhost
+        database: octopus_shard5
+    
+    country_shards:
+      duplicated_shard_name:
+        adapter: mysql
+        host: localhost
+        database: octopus_shard4
+        
+production_replicated:
+  replicated: true
+  shards:
+    slave1:
+      adapter: mysql
+      host: localhost
+      database: octopus_shard2
+    slave2:
+      adapter: mysql
+      host: localhost
+      database: octopus_shard3
+    slave3:
+      adapter: mysql
+      host: localhost
+      database: octopus_shard4
+    slave4:
+      adapter: mysql
+      host: localhost
+      database: octopus_shard5
+
+
+production_entire_replicated:
+  replicated: true
+  entire_replicated: true
+  shards:
+    slave1:
+      adapter: mysql
+      host: localhost
+      database: octopus_shard2
+    slave2:
+      adapter: mysql
+      host: localhost
+      database: octopus_shard3
+    slave3:
+      adapter: mysql
+      host: localhost
+      database: octopus_shard4
+    slave4:
+      adapter: mysql
+      host: localhost
+      database: octopus_shard5
+      
+  

@@ -8,7 +8,7 @@ lock "3.16.0"
 set :deploy_to, "/home/ngochai/projects/rails-app"
 
 set :application, 'rails_backend_app' 
-# Repository github của bạn. Tạo 1 repo mới trên github
+
 set :repo_url, 'git@github.com:nhai0905/rails_backend_app.git' 
 set :branch, :master
 set :pty, true
@@ -33,37 +33,6 @@ set :puma_worker_timeout, nil
 set :puma_init_active_record, true
 set :puma_preload_app, false
 
-namespace :puma do
-    desc 'Create Directories for Puma Pids and Socket'
-    task :make_dirs do
-      on roles(:app) do
-        execute "mkdir #{shared_path}/tmp/sockets -p"
-        execute "mkdir #{shared_path}/tmp/pids -p"
-      end
-    end
-  
-    before :start, :make_dirs
-  end
-  
-  namespace :deploy do
-    desc 'Initial Deploy'
-    task :initial do
-      on roles(:app) do
-        before 'deploy:restart', 'puma:start'
-        invoke 'deploy'
-      end
-    end
-  
-    desc 'Restart application'
-    task :restart do
-      on roles(:app), in: :sequence, wait: 5 do
-        invoke 'puma:restart'
-      end
-    end
-    
-    after  :finishing,    :cleanup
-    after  :finishing,    :restart
-  end
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
