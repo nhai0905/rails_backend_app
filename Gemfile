@@ -36,7 +36,7 @@ gem "capistrano-rbenv"
 
 gem 'devise'
 
-gem 'ar-octopus', '0.0.12', :require => "octopus"
+# gem 'ar-octopus', '0.0.12', :require => "octopus"
 
 
 
