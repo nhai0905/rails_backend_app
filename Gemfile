@@ -38,13 +38,13 @@ gem 'ar-octopus', '0.0.12', :require => "octopus"
 
 
 
-gem 'redis'
-gem 'redis-namespace'
-gem 'redis-rails'
-gem 'redis-rack-cache'
+# gem 'redis'
+# gem 'redis-namespace'
+# gem 'redis-rails'
+# gem 'redis-rack-cache'
 
-gem 'hiredis'
-gem 'redis-rails'
+# gem 'hiredis'
+# gem 'redis-rails'
 
 gem 'ed25519', '~> 1.2'
 gem 'bcrypt_pbkdf', '~> 1'
