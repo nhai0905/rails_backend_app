@@ -34,7 +34,7 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-# vendor/
+vendor/
 tmp/
 .vscode/
-# Gemfile.lock
+Gemfile.lock
