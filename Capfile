@@ -27,10 +27,17 @@ install_plugin Capistrano::SCM::Git
 #   https://github.com/capistrano/passenger
 #
 # require "capistrano/rvm"
-# require "capistrano/rbenv"
+require "capistrano/rbenv"
 # require "capistrano/chruby"
 # require "capistrano/bundler"
 require 'capistrano/puma'
+install_plugin Capistrano::Puma, load_hooks: false  # Default puma tasks
+install_plugin Capistrano::Puma::Workers  # if you want to control the workers (in cluster mode)
+install_plugin Capistrano::Puma::Jungle # if you need the jungle tasks
+install_plugin Capistrano::Puma::Monit, load_hooks: false  # if you need the monit tasks
+install_plugin Capistrano::Puma::Nginx  # if you want to upload a nginx site template
+install_plugin Capistrano::Puma::Daemon  # If you using puma daemonized (not supported in Puma 5+)
+
 # require "capistrano/rails/assets"
 # require "capistrano/rails/migrations"
 # require "capistrano/passenger"
