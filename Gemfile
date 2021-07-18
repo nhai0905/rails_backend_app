@@ -12,7 +12,7 @@ gem 'puma', '~> 4.0'
 
 gem 'figaro'
 # Use SCSS for stylesheets
-gem 'sass-rails'
+# gem 'sass-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

@@ -38,7 +38,7 @@ install_plugin Capistrano::Puma::Monit, load_hooks: false  # if you need the mon
 install_plugin Capistrano::Puma::Nginx  # if you want to upload a nginx site template
 install_plugin Capistrano::Puma::Daemon  # If you using puma daemonized (not supported in Puma 5+)
 
-require "capistrano/rails/assets"
+# require "capistrano/rails/assets"
 require "capistrano/rails/migrations"
 # require "capistrano/passenger"
 
