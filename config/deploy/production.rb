@@ -10,7 +10,7 @@ set :stage, :production
 set :rails_env, :production
 set :deploy_to, "/home/ngochai/projects/rails-app"
 set :branch, :master
-server "54.188.77.221", user: "ngochai", roles: %w(web app db)
+server "34.209.102.231", user: "ngochai", roles: %w(web app db)
 
 set :puma_rackup, -> { File.join(current_path, 'config.ru') }
 set :puma_state, "#{shared_path}/tmp/pids/puma.state"
